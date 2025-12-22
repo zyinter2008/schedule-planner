@@ -1034,8 +1034,9 @@
         // 缓存数据
         let plansCache = [];
         
-        // 当前选中的年份
+        // 当前选中的年份和月份
         let currentYear = new Date().getFullYear();
+        let currentMonth = new Date().getMonth() + 1; // 1-12
         
         // 年度目标缓存
         let goalsCache = {};
@@ -1119,6 +1120,9 @@
 
             // 更新年份选择器
             updateYearSelector(plans);
+            
+            // 更新筛选框选项（需要先更新，以便获取正确的筛选值）
+            updateFilterOptions(plans);
 
             // 应用筛选 - 首先按年份筛选
             let filteredPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
@@ -1209,9 +1213,6 @@
 
             // 更新计数
             document.getElementById('planCount').textContent = `共 ${filteredPlans.length} 项`;
-            
-            // 更新筛选框选项（基于全部数据）
-            updateFilterOptions(plans);
             
             // 更新统计（基于当前年份的数据）
             const yearPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
@@ -1339,11 +1340,20 @@
             }
         }
 
+        // 是否是首次加载
+        let isFirstLoad = true;
+
         // 更新筛选框选项（根据数据动态生成，仅当前年份）
         function updateFilterOptions(plans) {
             // 获取当前选中的值
-            const currentMonth = document.getElementById('filterMonth').value;
-            const currentWeek = document.getElementById('filterWeek').value;
+            let selectedMonth = document.getElementById('filterMonth').value;
+            let selectedWeek = document.getElementById('filterWeek').value;
+            
+            // 首次加载时，默认选中当前月份
+            if (isFirstLoad) {
+                selectedMonth = `${currentMonth}月`;
+                isFirstLoad = false;
+            }
             
             // 只获取当前年份的数据
             const yearPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
@@ -1359,15 +1369,20 @@
             const weekOrder = { '第一周': 1, '第二周': 2, '第三周': 3, '第四周': 4, '第五周': 5 };
             weeks.sort((a, b) => (weekOrder[a] || 0) - (weekOrder[b] || 0));
             
+            // 如果选中的月份不存在于数据中，则清空选择
+            if (selectedMonth && !months.includes(selectedMonth)) {
+                selectedMonth = '';
+            }
+            
             // 更新月份选项
             const monthSelect = document.getElementById('filterMonth');
             monthSelect.innerHTML = '<option value="">全部</option>' + 
-                months.map(m => `<option value="${m}" ${m === currentMonth ? 'selected' : ''}>${m}</option>`).join('');
+                months.map(m => `<option value="${m}" ${m === selectedMonth ? 'selected' : ''}>${m}</option>`).join('');
             
             // 更新周选项
             const weekSelect = document.getElementById('filterWeek');
             weekSelect.innerHTML = '<option value="">全部</option>' + 
-                weeks.map(w => `<option value="${w}" ${w === currentWeek ? 'selected' : ''}>${w}</option>`).join('');
+                weeks.map(w => `<option value="${w}" ${w === selectedWeek ? 'selected' : ''}>${w}</option>`).join('');
         }
 
         // 更新统计
