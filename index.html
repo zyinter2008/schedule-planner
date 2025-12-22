@@ -108,13 +108,36 @@
             border: 1px solid var(--border-color);
         }
 
+        .goals-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         .goals-section h2 {
             font-size: 1.3rem;
-            margin-bottom: 20px;
             color: var(--accent-yellow);
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        .btn-edit-goals {
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-edit-goals:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border-color: var(--accent-yellow);
         }
 
         .goals-grid {
@@ -421,6 +444,121 @@
             color: var(--accent-orange);
         }
 
+        /* 年份选择器 */
+        .year-selector {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .year-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .year-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .year-value {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fb923c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+        }
+
+        .year-nav {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .year-nav:hover {
+            background: var(--gradient-button);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .year-nav:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .year-tabs {
+            display: flex;
+            gap: 10px;
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .year-tab {
+            padding: 8px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .year-tab:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .year-tab.active {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #000;
+            border-color: transparent;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .year-selector {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .year-tabs {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                padding-top: 15px;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .year-value {
+                font-size: 2.5rem;
+            }
+        }
+
         .plan-actions {
             display: flex;
             gap: 8px;
@@ -671,21 +809,37 @@
             <p>追踪你的学习、运动和兴趣爱好计划 | 本地数据存储</p>
         </header>
 
+        <!-- 年份选择器 -->
+        <div class="year-selector animate-in" style="animation-delay: 0.05s">
+            <button class="year-nav" id="prevYear" onclick="changeYear(-1)">◀</button>
+            <div class="year-display">
+                <span class="year-label">年度计划</span>
+                <span class="year-value" id="currentYear">2025</span>
+            </div>
+            <button class="year-nav" id="nextYear" onclick="changeYear(1)">▶</button>
+            <div class="year-tabs" id="yearTabs">
+                <!-- 动态生成年份标签 -->
+            </div>
+        </div>
+
         <!-- 年度目标 -->
         <section class="goals-section animate-in" style="animation-delay: 0.1s">
-            <h2>🎯 年度目标</h2>
+            <div class="goals-header">
+                <h2 id="goalsTitle">🎯 2025 年度目标</h2>
+                <button class="btn-edit-goals" onclick="openGoalsModal()" title="编辑年度目标">✏️ 编辑</button>
+            </div>
             <div class="goals-grid">
                 <div class="goal-card learning">
                     <h3>📚 学习输入</h3>
-                    <p>web3(每周2h)、英语(每周0.5h*2)、读书(每周3h)、写作一篇(1h)</p>
+                    <p id="goalLearning">web3(每周2h)、英语(每周0.5h*2)、读书(每周3h)、写作一篇(1h)</p>
                 </div>
                 <div class="goal-card exercise">
                     <h3>🏃‍♀️ 运动锻炼</h3>
-                    <p>每周运动 0.5h * 2 次</p>
+                    <p id="goalExercise">每周运动 0.5h * 2 次</p>
                 </div>
                 <div class="goal-card hobby">
                     <h3>🎵 兴趣爱好</h3>
-                    <p>每周练习2h，录歌一首</p>
+                    <p id="goalHobby">每周练习2h，录歌一首</p>
                 </div>
             </div>
         </section>
@@ -845,6 +999,31 @@
         </div>
     </div>
 
+    <!-- 年度目标编辑模态框 -->
+    <div class="modal-overlay" id="goalsModal">
+        <div class="modal">
+            <h2>🎯 编辑 <span id="goalsModalYear">2025</span> 年度目标</h2>
+            <form id="goalsForm" onsubmit="saveGoals(event)">
+                <div class="form-group">
+                    <label>📚 学习输入目标</label>
+                    <textarea id="editGoalLearning" rows="2" placeholder="例如：每周读书3小时、英语学习等"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>🏃‍♀️ 运动锻炼目标</label>
+                    <textarea id="editGoalExercise" rows="2" placeholder="例如：每周运动2次、跑步5公里等"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>🎵 兴趣爱好目标</label>
+                    <textarea id="editGoalHobby" rows="2" placeholder="例如：每周练习2小时、学习新技能等"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeGoalsModal()">取消</button>
+                    <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Toast 容器 -->
     <div class="toast-container" id="toastContainer"></div>
 
@@ -854,6 +1033,12 @@
         
         // 缓存数据
         let plansCache = [];
+        
+        // 当前选中的年份
+        let currentYear = new Date().getFullYear();
+        
+        // 年度目标缓存
+        let goalsCache = {};
         
         // 类型映射
         const TYPE_MAP = {
@@ -932,13 +1117,18 @@
             let plans = await fetchPlans();
             if (!plans) return;
 
-            // 应用筛选
+            // 更新年份选择器
+            updateYearSelector(plans);
+
+            // 应用筛选 - 首先按年份筛选
+            let filteredPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
+            
+            // 应用其他筛选条件
             const filterMonth = document.getElementById('filterMonth').value;
             const filterWeek = document.getElementById('filterWeek').value;
             const filterType = document.getElementById('filterType').value;
             const filterStatus = document.getElementById('filterStatus').value;
 
-            let filteredPlans = [...plans];
             if (filterMonth) filteredPlans = filteredPlans.filter(p => p.month === filterMonth);
             if (filterWeek) filteredPlans = filteredPlans.filter(p => p.week === filterWeek);
             if (filterType) filteredPlans = filteredPlans.filter(p => p.type === filterType);
@@ -1020,20 +1210,147 @@
             // 更新计数
             document.getElementById('planCount').textContent = `共 ${filteredPlans.length} 项`;
             
-            // 更新筛选框选项和统计
+            // 更新筛选框选项（基于全部数据）
             updateFilterOptions(plans);
-            updateStats(plans);
+            
+            // 更新统计（基于当前年份的数据）
+            const yearPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
+            updateStats(yearPlans);
         }
 
-        // 更新筛选框选项（根据数据动态生成）
+        // 获取数据中的年份（从日期字段提取）
+        function getYearFromDate(dateStr) {
+            if (!dateStr) return null;
+            const match = dateStr.match(/^(\d{4})/);
+            return match ? parseInt(match[1]) : null;
+        }
+
+        // 获取所有年份
+        function getAllYears(plans) {
+            const years = new Set();
+            plans.forEach(p => {
+                const year = getYearFromDate(p.date);
+                if (year) years.add(year);
+            });
+            return [...years].sort((a, b) => a - b);
+        }
+
+        // 更新年份选择器
+        function updateYearSelector(plans) {
+            const years = getAllYears(plans);
+            if (years.length === 0) years.push(currentYear);
+            
+            // 确保当前年份在列表中
+            if (!years.includes(currentYear)) {
+                currentYear = years[years.length - 1]; // 选择最新年份
+            }
+            
+            // 更新年份显示
+            document.getElementById('currentYear').textContent = currentYear;
+            document.getElementById('goalsTitle').textContent = `🎯 ${currentYear} 年度目标`;
+            
+            // 更新年份标签
+            const tabsContainer = document.getElementById('yearTabs');
+            tabsContainer.innerHTML = years.map(year => 
+                `<button class="year-tab ${year === currentYear ? 'active' : ''}" onclick="selectYear(${year})">${year}</button>`
+            ).join('');
+            
+            // 更新导航按钮状态
+            const yearIndex = years.indexOf(currentYear);
+            document.getElementById('prevYear').disabled = yearIndex <= 0;
+            document.getElementById('nextYear').disabled = yearIndex >= years.length - 1;
+        }
+
+        // 切换年份
+        function changeYear(delta) {
+            const years = getAllYears(plansCache);
+            const currentIndex = years.indexOf(currentYear);
+            const newIndex = currentIndex + delta;
+            
+            if (newIndex >= 0 && newIndex < years.length) {
+                currentYear = years[newIndex];
+                renderPlans();
+                renderGoals();
+            }
+        }
+
+        // 选择年份
+        function selectYear(year) {
+            currentYear = year;
+            renderPlans();
+            renderGoals();
+        }
+
+        // 加载年度目标
+        async function fetchGoals() {
+            const goals = await api('/api/goals');
+            if (goals) goalsCache = goals;
+            return goalsCache;
+        }
+
+        // 渲染当前年份的目标
+        async function renderGoals() {
+            if (Object.keys(goalsCache).length === 0) {
+                await fetchGoals();
+            }
+            
+            const yearGoals = goalsCache[currentYear] || {
+                learning: '点击编辑设置目标',
+                exercise: '点击编辑设置目标',
+                hobby: '点击编辑设置目标'
+            };
+            
+            document.getElementById('goalLearning').textContent = yearGoals.learning || '点击编辑设置目标';
+            document.getElementById('goalExercise').textContent = yearGoals.exercise || '点击编辑设置目标';
+            document.getElementById('goalHobby').textContent = yearGoals.hobby || '点击编辑设置目标';
+        }
+
+        // 打开目标编辑模态框
+        function openGoalsModal() {
+            const yearGoals = goalsCache[currentYear] || {};
+            document.getElementById('goalsModalYear').textContent = currentYear;
+            document.getElementById('editGoalLearning').value = yearGoals.learning || '';
+            document.getElementById('editGoalExercise').value = yearGoals.exercise || '';
+            document.getElementById('editGoalHobby').value = yearGoals.hobby || '';
+            document.getElementById('goalsModal').classList.add('active');
+        }
+
+        // 关闭目标编辑模态框
+        function closeGoalsModal() {
+            document.getElementById('goalsModal').classList.remove('active');
+        }
+
+        // 保存目标
+        async function saveGoals(event) {
+            event.preventDefault();
+            
+            const goalData = {
+                learning: document.getElementById('editGoalLearning').value.trim(),
+                exercise: document.getElementById('editGoalExercise').value.trim(),
+                hobby: document.getElementById('editGoalHobby').value.trim()
+            };
+            
+            const result = await api(`/api/goals/${currentYear}`, 'PUT', goalData);
+            if (result) {
+                goalsCache[currentYear] = goalData;
+                renderGoals();
+                closeGoalsModal();
+                showToast('✅ 年度目标已保存', 'success');
+            }
+        }
+
+        // 更新筛选框选项（根据数据动态生成，仅当前年份）
         function updateFilterOptions(plans) {
             // 获取当前选中的值
             const currentMonth = document.getElementById('filterMonth').value;
             const currentWeek = document.getElementById('filterWeek').value;
             
+            // 只获取当前年份的数据
+            const yearPlans = plans.filter(p => getYearFromDate(p.date) === currentYear);
+            
             // 获取所有唯一的月份和周
-            const months = [...new Set(plans.map(p => p.month).filter(m => m))];
-            const weeks = [...new Set(plans.map(p => p.week).filter(w => w))];
+            const months = [...new Set(yearPlans.map(p => p.month).filter(m => m))];
+            const weeks = [...new Set(yearPlans.map(p => p.week).filter(w => w))];
             
             // 月份排序（按数字）
             months.sort((a, b) => (parseInt(a) || 0) - (parseInt(b) || 0));
@@ -1217,14 +1534,25 @@
         document.getElementById('planModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
+        document.getElementById('goalsModal').addEventListener('click', function(e) {
+            if (e.target === this) closeGoalsModal();
+        });
 
         // ESC 关闭模态框
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Escape') {
+                closeModal();
+                closeGoalsModal();
+            }
         });
 
         // 初始化
-        renderPlans();
+        async function init() {
+            await fetchGoals();
+            await renderPlans();
+            renderGoals();
+        }
+        init();
     </script>
 </body>
 </html>

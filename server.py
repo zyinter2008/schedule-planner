@@ -15,11 +15,24 @@ import time
 
 PORT = 3000
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data.json')
+GOALS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'goals.json')
 
 # 确保 data.json 存在
 if not os.path.exists(DATA_FILE):
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump([], f)
+
+# 确保 goals.json 存在，初始化默认目标
+if not os.path.exists(GOALS_FILE):
+    default_goals = {
+        "2025": {
+            "learning": "web3(每周2h)、英语(每周0.5h*2)、读书(每周3h)、写作一篇(1h)",
+            "exercise": "每周运动 0.5h * 2 次",
+            "hobby": "每周练习2h，录歌一首"
+        }
+    }
+    with open(GOALS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(default_goals, f, ensure_ascii=False, indent=2)
 
 def read_data():
     """读取数据文件"""
@@ -33,6 +46,19 @@ def write_data(data):
     """写入数据文件"""
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+def read_goals():
+    """读取年度目标"""
+    try:
+        with open(GOALS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except:
+        return {}
+
+def write_goals(goals):
+    """写入年度目标"""
+    with open(GOALS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(goals, f, ensure_ascii=False, indent=2)
 
 def generate_id():
     """生成唯一ID"""
@@ -74,6 +100,10 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             # 获取所有计划
             plans = read_data()
             self.send_json(plans)
+        elif parsed.path == '/api/goals':
+            # 获取年度目标
+            goals = read_goals()
+            self.send_json(goals)
         else:
             # 静态文件服务
             super().do_GET()
@@ -111,6 +141,18 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
                 print(f"📥 导入 {len(body)} 条计划")
             else:
                 self.send_json({'error': '无效的数据格式'}, 400)
+        elif parsed.path.startswith('/api/goals/'):
+            # 更新某一年的目标
+            year = parsed.path.split('/')[-1]
+            body = self.read_body()
+            if body:
+                goals = read_goals()
+                goals[year] = body
+                write_goals(goals)
+                self.send_json({'success': True, 'year': year})
+                print(f"🎯 更新 {year} 年度目标")
+            else:
+                self.send_json({'error': '无效的请求数据'}, 400)
         elif parsed.path.startswith('/api/plans/'):
             # 更新单个计划
             plan_id = parsed.path.split('/')[-1]
