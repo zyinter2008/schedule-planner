@@ -1,5 +1,2095 @@
 [
   {
+    "id": "1766381927463gn9026z85",
+    "title": "读《认知觉醒》",
+    "date": "2025-04-05",
+    "month": "4月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927464msiowdh9h",
+    "title": "输出复利挑战复盘",
+    "date": "2025-04-05",
+    "month": "4月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927465m9ut5lz4y",
+    "title": "羽毛球🏸",
+    "date": "2025-04-06",
+    "month": "4月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927467g687qtjs4",
+    "title": "万步卡",
+    "date": "2025-04-02",
+    "month": "4月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192746830sq6sqqr",
+    "title": "学英语",
+    "date": "2025-04-05",
+    "month": "4月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274695cc9tcbns",
+    "title": "web3学习",
+    "date": "2025-04-06",
+    "month": "4月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927470gi0rnp6rl",
+    "title": "声乐练习",
+    "date": "2025-04-06",
+    "month": "4月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927472wjaeqeav7",
+    "title": "录歌一首",
+    "date": "2025-04-06",
+    "month": "4月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927473nseglf24f",
+    "title": "web3学习",
+    "date": "2025-04-07",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927474yrlykxi48",
+    "title": "声乐练习",
+    "date": "2025-04-10",
+    "month": "4月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274758ueli0myt",
+    "title": "web3学习",
+    "date": "2025-04-08",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274777ex9z4jjl",
+    "title": "带娃去医院",
+    "date": "2025-04-09",
+    "month": "4月",
+    "week": "第二周",
+    "type": "other",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927478njmeiga16",
+    "title": "运动会跑步",
+    "date": "2025-04-10",
+    "month": "4月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274794r7aow8rx",
+    "title": "声乐练习",
+    "date": "2025-04-12",
+    "month": "4月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927481u3w3d5riy",
+    "title": "学英语",
+    "date": "2025-04-12",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274822vrd2u1wb",
+    "title": "读书《好好学习》",
+    "date": "2025-04-12",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927483kgl6rw1fw",
+    "title": "输出一篇文章",
+    "date": "2025-04-08",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927485yeflovcab",
+    "title": "学英语",
+    "date": "2025-04-09",
+    "month": "4月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927486bkgs2h0hz",
+    "title": "录歌一首",
+    "date": "2025-04-13",
+    "month": "4月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927487fyouotfxb",
+    "title": "羽毛球",
+    "date": "2025-04-13",
+    "month": "4月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927488xssd8w6ra",
+    "title": "声乐练习",
+    "date": "2025-04-14",
+    "month": "4月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927490qj1lefgir",
+    "title": "web3学习",
+    "date": "2025-04-16",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927491v5sx34tqp",
+    "title": "带娃体检",
+    "date": "2025-04-17",
+    "month": "4月",
+    "week": "第三周",
+    "type": "other",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927492o756ozay4",
+    "title": "web3学习",
+    "date": "2025-04-18",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927494i40ajewxd",
+    "title": "读书《好好学习》",
+    "date": "2025-04-19",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927495htcg7qazb",
+    "title": "输出一篇文章",
+    "date": "2025-04-19",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819274964c02sprnc",
+    "title": "游泳🏊🏻",
+    "date": "2025-04-16",
+    "month": "4月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819274975an1pp8oc",
+    "title": "游泳",
+    "date": "2025-04-18",
+    "month": "4月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192749912n7wgyma",
+    "title": "声乐练习",
+    "date": "2025-04-19",
+    "month": "4月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927500yxxgaxu7z",
+    "title": "录歌一首",
+    "date": "2025-04-20",
+    "month": "4月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927501h5b72wpz9",
+    "title": "学英语",
+    "date": "2025-04-15",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927502ut95p0i6k",
+    "title": "学英语",
+    "date": "2025-04-20",
+    "month": "4月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927504xxl9tbngg",
+    "title": "web3学习",
+    "date": "2025-04-21",
+    "month": "4月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927505ccgfrfdxa",
+    "title": "学英语",
+    "date": "2025-04-22",
+    "month": "4月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275062lpv0fumk",
+    "title": "游泳",
+    "date": "2025-04-23",
+    "month": "4月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927508in7ml743g",
+    "title": "英语口语",
+    "date": "2025-04-23",
+    "month": "4月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275093jeycxg5u",
+    "title": "读书《好好学习》",
+    "date": "2025-04-26",
+    "month": "4月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927510rjie3id30",
+    "title": "声乐练习",
+    "date": "2025-04-23",
+    "month": "4月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927512rugev0t1g",
+    "title": "录歌一首",
+    "date": "2025-04-27",
+    "month": "4月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275133suyeprbq",
+    "title": "声乐练习",
+    "date": "2025-04-26",
+    "month": "4月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192751460o31chnt",
+    "title": "游泳",
+    "date": "2025-04-25",
+    "month": "4月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927515yre8cey3s",
+    "title": "打疫苗",
+    "date": "2025-04-24",
+    "month": "4月",
+    "week": "第四周",
+    "type": "other",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275178wgtcavcd",
+    "title": "游泳",
+    "date": "2025-04-30",
+    "month": "4月",
+    "week": "第五周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927518vjvlt49fo",
+    "title": "读书3h",
+    "date": "2025-05-03",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927519a80pz77ek",
+    "title": "写一篇文章",
+    "date": "2025-05-04",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927521flzq4wou6",
+    "title": "万步卡",
+    "date": "2025-05-04",
+    "month": "4月",
+    "week": "第五周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927522v26eo4sxk",
+    "title": "声乐练习",
+    "date": "2025-05-01",
+    "month": "4月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275236m7fahewx",
+    "title": "声乐练习",
+    "date": "2025-05-03",
+    "month": "4月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192752452vgx93g6",
+    "title": "录歌一首",
+    "date": "2025-05-03",
+    "month": "4月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927526xboka9al7",
+    "title": "学英语",
+    "date": "2025-05-01",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275274iwnw8ez0",
+    "title": "学英语",
+    "date": "2025-05-03",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927528xitgo97jh",
+    "title": "web3学习",
+    "date": "2025-05-02",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275294uy5xxtqt",
+    "title": "web3学习",
+    "date": "2025-05-04",
+    "month": "4月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "176638192753101cpovpny",
+    "title": "web3学习",
+    "date": "2025-05-05",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927532lvzdj41oh",
+    "title": "羽毛球",
+    "date": "2025-05-05",
+    "month": "5月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927533ag4ehip5y",
+    "title": "web3学习",
+    "date": "2025-05-08",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927535qbxa12fbz",
+    "title": "读书3h",
+    "date": "2025-05-10",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927536n55vvaq1k",
+    "title": "万步卡",
+    "date": "2025-05-09",
+    "month": "5月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927537dgzfe1jyj",
+    "title": "学英语",
+    "date": "2025-05-06",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275386tixfb22x",
+    "title": "学英语",
+    "date": "2025-05-07",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275408xtvw2r2y",
+    "title": "声乐练习",
+    "date": "2025-05-10",
+    "month": "5月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275416jvjcjgie",
+    "title": "声乐练习",
+    "date": "2025-05-08",
+    "month": "5月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275420ci9e962c",
+    "title": "录歌一首",
+    "date": "2025-05-11",
+    "month": "5月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192754414zvu4g3j",
+    "title": "写一篇文章",
+    "date": "2025-05-10",
+    "month": "5月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927545t3d6srh69",
+    "title": "带妈体检",
+    "date": "2025-05-06",
+    "month": "5月",
+    "week": "第一周",
+    "type": "other",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927546smbhcujxm",
+    "title": "带娃复查",
+    "date": "2025-05-07",
+    "month": "5月",
+    "week": "第一周",
+    "type": "other",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927548l7qyucm2y",
+    "title": "游泳",
+    "date": "2025-05-23",
+    "month": "5月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927549qrmvtvb6q",
+    "title": "声乐练习",
+    "date": "2025-05-24",
+    "month": "5月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927550bw6qoc6yd",
+    "title": "读书3h",
+    "date": "2025-05-25",
+    "month": "5月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275510a2mh9h5j",
+    "title": "运动",
+    "date": "2025-05-25",
+    "month": "5月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275537myrqleai",
+    "title": "学英语",
+    "date": "2025-05-24",
+    "month": "5月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819275547he24lvam",
+    "title": "学英语",
+    "date": "2025-05-25",
+    "month": "5月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927562vdyd3wm78",
+    "title": "学习AI智能体",
+    "date": "2025-07-12",
+    "month": "7月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927564voiooezj0",
+    "title": "学习AI智能体",
+    "date": "2025-07-13",
+    "month": "7月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927565zq71aw3sa",
+    "title": "游泳",
+    "date": "2025-07-11",
+    "month": "7月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927566re3t5j9cy",
+    "title": "游泳",
+    "date": "2025-07-13",
+    "month": "7月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927567j0onvd080",
+    "title": "学英语",
+    "date": "2025-07-12",
+    "month": "7月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927569bvseca5hy",
+    "title": "读书3h",
+    "date": "2025-07-12",
+    "month": "7月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275705tmnkw6ta",
+    "title": "声乐练习",
+    "date": "2025-07-09",
+    "month": "7月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275715ytqspnj6",
+    "title": "声乐练习",
+    "date": "2025-07-12",
+    "month": "7月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819275738uoqvw9sw",
+    "title": "学英语",
+    "date": "2025-07-13",
+    "month": "7月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927574zc1ktpa9z",
+    "title": "学习A智能体",
+    "date": "2025-07-14",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927575agl7devba",
+    "title": "学习A智能体",
+    "date": "2025-07-15",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927576cpgefj045",
+    "title": "服务可靠性案例",
+    "date": "2025-07-20",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927578ppysm4li1",
+    "title": "游泳",
+    "date": "2025-07-18",
+    "month": "7月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192757953bgsjmtu",
+    "title": "游泳",
+    "date": "2025-07-20",
+    "month": "7月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927580jlm8jcy9o",
+    "title": "读书3h",
+    "date": "2025-07-19",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927582pp9zohhzi",
+    "title": "学英语",
+    "date": "2025-07-19",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192758317n1jv614",
+    "title": "学英语",
+    "date": "2025-07-20",
+    "month": "7月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927584sgh2b7p63",
+    "title": "学声乐",
+    "date": "2025-07-19",
+    "month": "7月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192758646yquonnd",
+    "title": "声乐练习",
+    "date": "2025-07-20",
+    "month": "7月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927587hnva4507g",
+    "title": "录歌一首",
+    "date": "2025-07-20",
+    "month": "7月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927588kt745x88l",
+    "title": "服务可靠性案例",
+    "date": "2025-07-21",
+    "month": "7月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927589n8crlqm4n",
+    "title": "服务可靠性案例",
+    "date": "2025-07-23",
+    "month": "7月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927591xutdzh5gm",
+    "title": "读书3h",
+    "date": "2025-07-26",
+    "month": "7月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927592qy0czsa0d",
+    "title": "学英语",
+    "date": "2025-07-22",
+    "month": "7月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927593ukizkbg5w",
+    "title": "学英语",
+    "date": "2025-07-27",
+    "month": "7月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927594bgns6p7am",
+    "title": "游泳",
+    "date": "2025-07-25",
+    "month": "7月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927596r2wx5zk6x",
+    "title": "游泳",
+    "date": "2025-07-27",
+    "month": "7月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927597wsavupl36",
+    "title": "声乐练习",
+    "date": "2025-07-21",
+    "month": "7月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927598xpsy8abpm",
+    "title": "声乐练习",
+    "date": "2025-07-27",
+    "month": "7月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276007ugx7igvw",
+    "title": "录歌一首",
+    "date": "2025-07-27",
+    "month": "7月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927601utbz9wze6",
+    "title": "服务可靠性案例",
+    "date": "2025-07-28",
+    "month": "7月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276027nng43eyq",
+    "title": "服务可靠性案例",
+    "date": "2025-07-29",
+    "month": "7月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927603ksb217qmb",
+    "title": "学英语",
+    "date": "2025-07-30",
+    "month": "7月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927605xzu9b3097",
+    "title": "学英语",
+    "date": "2025-07-31",
+    "month": "7月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276068n4ac4bu3",
+    "title": "读书3h",
+    "date": "2025-08-02",
+    "month": "7月",
+    "week": "第五周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927607k4n1g8001",
+    "title": "快走",
+    "date": "2025-08-03",
+    "month": "7月",
+    "week": "第五周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927609yhvm48k7y",
+    "title": "游泳",
+    "date": "2025-08-03",
+    "month": "7月",
+    "week": "第五周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927610wzs3gzzbc",
+    "title": "声乐练习",
+    "date": "2025-07-29",
+    "month": "7月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927611oqfbv0f9z",
+    "title": "声乐练习",
+    "date": "2025-08-02",
+    "month": "7月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276124kljpaezu",
+    "title": "录歌一首",
+    "date": "2025-08-03",
+    "month": "7月",
+    "week": "第五周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927614o551756g1",
+    "title": "服务可靠性案例",
+    "date": "2025-08-04",
+    "month": "8月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927615s5oj60aic",
+    "title": "服务可靠性案例",
+    "date": "2025-08-05",
+    "month": "8月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927616jv21cf4vc",
+    "title": "读书3h",
+    "date": "2025-08-09",
+    "month": "8月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927618bd4ohghj6",
+    "title": "学英语",
+    "date": "2025-08-08",
+    "month": "8月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927619s48kgrz01",
+    "title": "学英语",
+    "date": "2025-08-10",
+    "month": "8月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927620zzwoue82q",
+    "title": "声乐练习",
+    "date": "2025-08-08",
+    "month": "8月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276216ykx6ay98",
+    "title": "声乐练习",
+    "date": "2025-08-10",
+    "month": "8月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "176638192762338xw7bgr0",
+    "title": "爬山",
+    "date": "2025-08-08",
+    "month": "8月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927624potacd5n6",
+    "title": "服务可靠性案例",
+    "date": "2025-08-13",
+    "month": "8月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927625844wpzz57",
+    "title": "服务可靠性案例",
+    "date": "2025-08-14",
+    "month": "8月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927627dgorwm380",
+    "title": "游泳",
+    "date": "2025-08-12",
+    "month": "8月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927628o0vmosyno",
+    "title": "游泳",
+    "date": "2025-08-15",
+    "month": "8月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927629ucgb8lrzp",
+    "title": "读书3h",
+    "date": "2025-08-16",
+    "month": "8月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276317vcrbnd2g",
+    "title": "声乐学习",
+    "date": "2025-08-15",
+    "month": "8月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927632l301878vn",
+    "title": "声乐练习",
+    "date": "2025-08-16",
+    "month": "8月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927633s7mb2crcv",
+    "title": "学英语",
+    "date": "2025-08-14",
+    "month": "8月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927634nbrauu1rx",
+    "title": "学英语",
+    "date": "2025-08-17",
+    "month": "8月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276369n7edpks1",
+    "title": "学英语",
+    "date": "2025-08-19",
+    "month": "8月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927637o8ekgeqai",
+    "title": "学英语",
+    "date": "2025-08-21",
+    "month": "8月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927638w8ymy32b2",
+    "title": "声乐学习",
+    "date": "2025-08-21",
+    "month": "8月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927640vxc5fiqu0",
+    "title": "声乐学习",
+    "date": "2025-08-24",
+    "month": "8月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927641qr2thvyxb",
+    "title": "读书3h",
+    "date": "2025-08-21",
+    "month": "8月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927642eewt4pspm",
+    "title": "游泳",
+    "date": "2025-08-21",
+    "month": "8月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276434hn943cyw",
+    "title": "游泳",
+    "date": "2025-08-22",
+    "month": "8月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927645xsqf9sbbd",
+    "title": "线下大课复盘",
+    "date": "2025-08-26",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927646nj08lah4y",
+    "title": "万步卡",
+    "date": "2025-08-27",
+    "month": "8月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927647ilr26443d",
+    "title": "跑步",
+    "date": "2025-08-31",
+    "month": "8月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927649jubo1hxy5",
+    "title": "读书3h",
+    "date": "2025-08-30",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927650mnf0hklax",
+    "title": "声乐学习",
+    "date": "2025-08-28",
+    "month": "8月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927651o6itk2npp",
+    "title": "声乐学习",
+    "date": "2025-08-30",
+    "month": "8月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192765234ao43swp",
+    "title": "学英语",
+    "date": "2025-08-27",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276540vvrby8ut",
+    "title": "学英语",
+    "date": "2025-08-29",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276557lwt88mej",
+    "title": "服务可靠性案例",
+    "date": "2025-08-27",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927656tfqriyld3",
+    "title": "服务可靠性案例",
+    "date": "2025-08-31",
+    "month": "8月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927666cmfueqi6m",
+    "title": "游泳",
+    "date": "2025-09-03",
+    "month": "9月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927668yof5emtmb",
+    "title": "游泳",
+    "date": "2025-09-05",
+    "month": "9月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276694a8bmh4e7",
+    "title": "游泳",
+    "date": "2025-09-07",
+    "month": "9月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927670c799txfnj",
+    "title": "学英语",
+    "date": "2025-09-07",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927671x1l0vf36l",
+    "title": "学英语",
+    "date": "2025-09-07",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192767371ml1q8be",
+    "title": "AI",
+    "date": "2025-09-02",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276741wsurwrf8",
+    "title": "AI",
+    "date": "2025-09-03",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927675vwv4cm572",
+    "title": "读书3h",
+    "date": "2025-09-06",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276765h17gtxxq",
+    "title": "每天强制20分钟使用AI",
+    "date": "2025-09-07",
+    "month": "9月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927678z9no6o50f",
+    "title": "声乐学习",
+    "date": "2025-09-04",
+    "month": "9月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276795ag4t3l2o",
+    "title": "声乐学习",
+    "date": "2025-09-07",
+    "month": "9月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927680u8aad95gb",
+    "title": "学英语",
+    "date": "2025-09-09",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927682pxrz0yuyt",
+    "title": "AI",
+    "date": "2025-09-10",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927683okimvx0l2",
+    "title": "AI",
+    "date": "2025-09-12",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927684y9ky7li20",
+    "title": "每天强制20分钟使用AI",
+    "date": "2025-09-14",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276852psdhxxtf",
+    "title": "学英语",
+    "date": "2025-09-11",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927687cvjun59f4",
+    "title": "读书3h",
+    "date": "2025-09-13",
+    "month": "9月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927688w3onm2lx8",
+    "title": "游泳",
+    "date": "2025-09-09",
+    "month": "9月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927689qvmqqbchz",
+    "title": "游泳",
+    "date": "2025-09-12",
+    "month": "9月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927691d4gygcb8h",
+    "title": "游泳",
+    "date": "2025-09-09",
+    "month": "9月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927692wwlupdg6w",
+    "title": "声乐",
+    "date": "2025-09-11",
+    "month": "9月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "176638192769379uxev2cn",
+    "title": "声乐",
+    "date": "2025-09-13",
+    "month": "9月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276946wimkjt5x",
+    "title": "AI",
+    "date": "2025-09-16",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819276963eevoc1zv",
+    "title": "AI",
+    "date": "2025-09-18",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927697zhgsafawh",
+    "title": "每天强制20分钟使用AI",
+    "date": "2025-09-21",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819276988hmswszst",
+    "title": "学英语",
+    "date": "2025-09-15",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277006679bjsz5",
+    "title": "学英语",
+    "date": "2025-09-18",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927701vtv5q0dtx",
+    "title": "读书3h",
+    "date": "2025-09-20",
+    "month": "9月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819277024b4g602gt",
+    "title": "游泳",
+    "date": "2025-09-17",
+    "month": "9月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927703hy8nwwxab",
+    "title": "游泳",
+    "date": "2025-09-19",
+    "month": "9月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927705s4dyjed8e",
+    "title": "游泳",
+    "date": "2025-09-21",
+    "month": "9月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927706b9e6st2fj",
+    "title": "声乐",
+    "date": "2025-09-18",
+    "month": "9月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819277077naonhn3q",
+    "title": "声乐",
+    "date": "2025-09-20",
+    "month": "9月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "17663819277091mnt1g7o0",
+    "title": "AI",
+    "date": "2025-10-16",
+    "month": "10月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927710z99o5dq2r",
+    "title": "技术更新",
+    "date": "2025-10-15",
+    "month": "10月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927711a2yc4rje1",
+    "title": "英语",
+    "date": "2025-10-13",
+    "month": "10月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927712h27kpnnwr",
+    "title": "英语",
+    "date": "2025-10-14",
+    "month": "10月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927714kgnr7gkv6",
+    "title": "读书3h",
+    "date": "2025-10-18",
+    "month": "10月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277158ls3hdqeg",
+    "title": "跑步",
+    "date": "2025-10-14",
+    "month": "10月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927716qedqb8vte",
+    "title": "跑步",
+    "date": "2025-10-16",
+    "month": "10月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927718wfghhst66",
+    "title": "跑步",
+    "date": "2025-10-18",
+    "month": "10月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927719s60zc6pou",
+    "title": "声乐",
+    "date": "2025-10-18",
+    "month": "10月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277204ciyv6xzn",
+    "title": "声乐",
+    "date": "2025-10-19",
+    "month": "10月",
+    "week": "第二周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927721fscolg71k",
+    "title": "技术更新",
+    "date": "2025-10-21",
+    "month": "10月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277237nn487x83",
+    "title": "AI",
+    "date": "2025-10-22",
+    "month": "10月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277240q2jfg43j",
+    "title": "英语",
+    "date": "2025-10-23",
+    "month": "10月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927725oit9zu6iy",
+    "title": "英语",
+    "date": "2025-10-24",
+    "month": "10月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927726k4mrd897k",
+    "title": "读书3h",
+    "date": "2025-10-25",
+    "month": "10月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927728l80yd3k2x",
+    "title": "跑步",
+    "date": "2025-10-22",
+    "month": "10月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192772938hf7zywy",
+    "title": "跑步",
+    "date": "2025-10-24",
+    "month": "10月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927730ki9xcjy74",
+    "title": "跑步",
+    "date": "2025-10-26",
+    "month": "10月",
+    "week": "第三周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "176638192773231qknrjnh",
+    "title": "声乐",
+    "date": "2025-10-22",
+    "month": "10月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927733noo7hgyud",
+    "title": "声乐",
+    "date": "2025-10-25",
+    "month": "10月",
+    "week": "第三周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927734fjmyap2n0",
+    "title": "技术更新",
+    "date": "2025-10-28",
+    "month": "10月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17663819277363p8xnj9sq",
+    "title": "AI",
+    "date": "2025-10-29",
+    "month": "10月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927737omay0one8",
+    "title": "英语",
+    "date": "2025-10-29",
+    "month": "10月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927738fxzt9eku0",
+    "title": "英语",
+    "date": "2025-11-01",
+    "month": "10月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927739l8gamw038",
+    "title": "读书3h",
+    "date": "2025-11-01",
+    "month": "10月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927741g027jqgiz",
+    "title": "万步卡",
+    "date": "2025-10-29",
+    "month": "10月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927742egv33ux5w",
+    "title": "跑步",
+    "date": "2025-10-31",
+    "month": "10月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "1766381927743lws78rxn5",
+    "title": "跑步",
+    "date": "2025-11-01",
+    "month": "10月",
+    "week": "第四周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927745ru3qp1mba",
+    "title": "声乐",
+    "date": "2025-11-01",
+    "month": "10月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "1766381927746bzl8crdti",
+    "title": "声乐",
+    "date": "2025-11-02",
+    "month": "10月",
+    "week": "第四周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
     "id": "1",
     "title": "跑步",
     "date": "2025-11-07",

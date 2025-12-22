@@ -416,6 +416,11 @@
             color: var(--accent-yellow);
         }
 
+        .type-tag.other {
+            background: rgba(251, 146, 60, 0.2);
+            color: var(--accent-orange);
+        }
+
         .plan-actions {
             display: flex;
             gap: 8px;
@@ -723,18 +728,14 @@
                     <label>月份:</label>
                     <select id="filterMonth">
                         <option value="">全部</option>
-                        <option value="11月">11月</option>
-                        <option value="12月">12月</option>
+                        <!-- 动态生成 -->
                     </select>
                 </div>
                 <div class="filter-group">
                     <label>周:</label>
                     <select id="filterWeek">
                         <option value="">全部</option>
-                        <option value="第一周">第一周</option>
-                        <option value="第二周">第二周</option>
-                        <option value="第三周">第三周</option>
-                        <option value="第四周">第四周</option>
+                        <!-- 动态生成 -->
                     </select>
                 </div>
                 <div class="filter-group">
@@ -744,6 +745,7 @@
                         <option value="learning">📚 学习输入</option>
                         <option value="exercise">🏃‍♀️ 运动锻炼</option>
                         <option value="hobby">🎵 兴趣爱好</option>
+                        <option value="other">🚗 其他事项</option>
                         <option value="goal">🌲 目标设定</option>
                     </select>
                 </div>
@@ -827,6 +829,7 @@
                         <option value="learning">📚 学习输入</option>
                         <option value="exercise">🏃‍♀️ 运动锻炼</option>
                         <option value="hobby">🎵 兴趣爱好</option>
+                        <option value="other">🚗 其他事项</option>
                         <option value="goal">🌲 目标设定</option>
                     </select>
                 </div>
@@ -857,7 +860,8 @@
             'learning': { label: '📚 学习输入', class: 'learning' },
             'exercise': { label: '🏃‍♀️ 运动锻炼', class: 'exercise' },
             'hobby': { label: '🎵 兴趣爱好', class: 'hobby' },
-            'goal': { label: '🌲 目标设定', class: 'goal' }
+            'goal': { label: '🌲 目标设定', class: 'goal' },
+            'other': { label: '🚗 其他事项', class: 'other' }
         };
 
         // API 请求封装
@@ -957,14 +961,19 @@
                 grouped[key].plans.push(plan);
             });
 
-            // 排序
+            // 排序（支持所有月份）
             const sortedGroups = Object.values(grouped).sort((a, b) => {
-                const monthOrder = { '11月': 1, '12月': 2 };
-                const weekOrder = { '第一周': 1, '第二周': 2, '第三周': 3, '第四周': 4 };
-                if (monthOrder[a.month] !== monthOrder[b.month]) {
-                    return monthOrder[a.month] - monthOrder[b.month];
+                // 从月份字符串提取数字（如 "4月" -> 4）
+                const getMonthNum = (m) => parseInt(m) || 0;
+                const weekOrder = { '第一周': 1, '第二周': 2, '第三周': 3, '第四周': 4, '第五周': 5 };
+                
+                const monthA = getMonthNum(a.month);
+                const monthB = getMonthNum(b.month);
+                
+                if (monthA !== monthB) {
+                    return monthA - monthB;
                 }
-                return weekOrder[a.week] - weekOrder[b.week];
+                return (weekOrder[a.week] || 0) - (weekOrder[b.week] || 0);
             });
 
             if (filteredPlans.length === 0) {
@@ -1010,7 +1019,38 @@
 
             // 更新计数
             document.getElementById('planCount').textContent = `共 ${filteredPlans.length} 项`;
+            
+            // 更新筛选框选项和统计
+            updateFilterOptions(plans);
             updateStats(plans);
+        }
+
+        // 更新筛选框选项（根据数据动态生成）
+        function updateFilterOptions(plans) {
+            // 获取当前选中的值
+            const currentMonth = document.getElementById('filterMonth').value;
+            const currentWeek = document.getElementById('filterWeek').value;
+            
+            // 获取所有唯一的月份和周
+            const months = [...new Set(plans.map(p => p.month).filter(m => m))];
+            const weeks = [...new Set(plans.map(p => p.week).filter(w => w))];
+            
+            // 月份排序（按数字）
+            months.sort((a, b) => (parseInt(a) || 0) - (parseInt(b) || 0));
+            
+            // 周排序
+            const weekOrder = { '第一周': 1, '第二周': 2, '第三周': 3, '第四周': 4, '第五周': 5 };
+            weeks.sort((a, b) => (weekOrder[a] || 0) - (weekOrder[b] || 0));
+            
+            // 更新月份选项
+            const monthSelect = document.getElementById('filterMonth');
+            monthSelect.innerHTML = '<option value="">全部</option>' + 
+                months.map(m => `<option value="${m}" ${m === currentMonth ? 'selected' : ''}>${m}</option>`).join('');
+            
+            // 更新周选项
+            const weekSelect = document.getElementById('filterWeek');
+            weekSelect.innerHTML = '<option value="">全部</option>' + 
+                weeks.map(w => `<option value="${w}" ${w === currentWeek ? 'selected' : ''}>${w}</option>`).join('');
         }
 
         // 更新统计
