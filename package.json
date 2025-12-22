@@ -1,0 +1,13 @@
+{
+  "name": "schedule-planner",
+  "version": "1.1.0",
+  "description": "月度计划看板 - 本地数据存储版",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["schedule", "planner", "todo"],
+  "author": "",
+  "license": "MIT"
+}
+

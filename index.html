@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📆 月度计划看板</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #16213e;
+            --bg-hover: #1f3460;
+            --accent-blue: #4facfe;
+            --accent-purple: #a855f7;
+            --accent-pink: #f472b6;
+            --accent-green: #10b981;
+            --accent-yellow: #fbbf24;
+            --accent-orange: #fb923c;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #334155;
+            --shadow-glow: 0 0 40px rgba(79, 172, 254, 0.15);
+            --gradient-header: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-button: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* 背景效果 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(79, 172, 254, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(244, 114, 182, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部 */
+        header {
+            background: var(--gradient-header);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(25deg);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        /* 年度目标区域 */
+        .goals-section {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .goals-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .goal-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-blue);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .goal-card.learning { border-left-color: var(--accent-blue); }
+        .goal-card.exercise { border-left-color: var(--accent-green); }
+        .goal-card.hobby { border-left-color: var(--accent-pink); }
+
+        .goal-card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .goal-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-group label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        select, input[type="text"], input[type="date"] {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-button);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+        }
+
+        .btn-danger {
+            background: #dc2626;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #b91c1c;
+        }
+
+        /* 统计卡片 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-button);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        .stat-card.learning .stat-value { background: linear-gradient(135deg, #4facfe, #00f2fe); -webkit-background-clip: text; background-clip: text; }
+        .stat-card.exercise .stat-value { background: linear-gradient(135deg, #10b981, #34d399); -webkit-background-clip: text; background-clip: text; }
+        .stat-card.hobby .stat-value { background: linear-gradient(135deg, #f472b6, #ec4899); -webkit-background-clip: text; background-clip: text; }
+
+        /* 计划列表 */
+        .plans-section {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        .plans-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .plans-header h2 {
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .week-group {
+            margin-bottom: 25px;
+        }
+
+        .week-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .week-header h3 {
+            font-size: 1.1rem;
+            color: var(--accent-purple);
+        }
+
+        .week-header .week-stats {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        .plan-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .plan-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto auto;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .plan-item:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-color);
+        }
+
+        .plan-item.completed {
+            opacity: 0.6;
+        }
+
+        .plan-item.completed .plan-title {
+            color: var(--text-muted);
+        }
+
+        .checkbox-wrapper {
+            position: relative;
+        }
+
+        .checkbox-wrapper input {
+            display: none;
+        }
+
+        .checkbox-wrapper label {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .checkbox-wrapper input:checked + label {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        .plan-title {
+            font-weight: 500;
+        }
+
+        .plan-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .type-tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .type-tag.learning {
+            background: rgba(79, 172, 254, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .type-tag.exercise {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+        }
+
+        .type-tag.hobby {
+            background: rgba(244, 114, 182, 0.2);
+            color: var(--accent-pink);
+        }
+
+        .type-tag.goal {
+            background: rgba(251, 191, 36, 0.2);
+            color: var(--accent-yellow);
+        }
+
+        .plan-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .plan-actions button {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plan-actions button:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .plan-actions button.delete:hover {
+            background: rgba(220, 38, 38, 0.2);
+            color: #dc2626;
+        }
+
+        /* 模态框 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            transform: translateY(-20px);
+            transition: transform 0.3s;
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal h2 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .empty-state h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .control-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .plan-item {
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto auto;
+            }
+
+            .plan-date, .type-tag, .plan-actions {
+                grid-column: 2;
+            }
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .plan-item {
+            animation: fadeInUp 0.3s ease-out forwards;
+        }
+
+        /* 进度条 */
+        .progress-bar {
+            height: 6px;
+            background: var(--bg-card);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-bar .fill {
+            height: 100%;
+            background: var(--gradient-button);
+            border-radius: 3px;
+            transition: width 0.5s ease-out;
+        }
+
+        /* Toast 通知 */
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .toast {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .toast.error {
+            border-left: 4px solid #dc2626;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="animate-in">
+            <h1>📆 月度计划看板</h1>
+            <p>追踪你的学习、运动和兴趣爱好计划 | 本地数据存储</p>
+        </header>
+
+        <!-- 年度目标 -->
+        <section class="goals-section animate-in" style="animation-delay: 0.1s">
+            <h2>🎯 年度目标</h2>
+            <div class="goals-grid">
+                <div class="goal-card learning">
+                    <h3>📚 学习输入</h3>
+                    <p>web3(每周2h)、英语(每周0.5h*2)、读书(每周3h)、写作一篇(1h)</p>
+                </div>
+                <div class="goal-card exercise">
+                    <h3>🏃‍♀️ 运动锻炼</h3>
+                    <p>每周运动 0.5h * 2 次</p>
+                </div>
+                <div class="goal-card hobby">
+                    <h3>🎵 兴趣爱好</h3>
+                    <p>每周练习2h，录歌一首</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid animate-in" style="animation-delay: 0.2s">
+            <div class="stat-card">
+                <div class="stat-value" id="totalPlans">0</div>
+                <div class="stat-label">总计划数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completedPlans">0</div>
+                <div class="stat-label">已完成</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completionRate">0%</div>
+                <div class="stat-label">完成率</div>
+                <div class="progress-bar">
+                    <div class="fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="stat-card learning">
+                <div class="stat-value" id="learningCount">0</div>
+                <div class="stat-label">📚 学习任务</div>
+            </div>
+            <div class="stat-card exercise">
+                <div class="stat-value" id="exerciseCount">0</div>
+                <div class="stat-label">🏃‍♀️ 运动任务</div>
+            </div>
+            <div class="stat-card hobby">
+                <div class="stat-value" id="hobbyCount">0</div>
+                <div class="stat-label">🎵 兴趣爱好</div>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel animate-in" style="animation-delay: 0.3s">
+            <div class="control-row">
+                <div class="filter-group">
+                    <label>月份:</label>
+                    <select id="filterMonth">
+                        <option value="">全部</option>
+                        <option value="11月">11月</option>
+                        <option value="12月">12月</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>周:</label>
+                    <select id="filterWeek">
+                        <option value="">全部</option>
+                        <option value="第一周">第一周</option>
+                        <option value="第二周">第二周</option>
+                        <option value="第三周">第三周</option>
+                        <option value="第四周">第四周</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>类型:</label>
+                    <select id="filterType">
+                        <option value="">全部</option>
+                        <option value="learning">📚 学习输入</option>
+                        <option value="exercise">🏃‍♀️ 运动锻炼</option>
+                        <option value="hobby">🎵 兴趣爱好</option>
+                        <option value="goal">🌲 目标设定</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>状态:</label>
+                    <select id="filterStatus">
+                        <option value="">全部</option>
+                        <option value="completed">已完成</option>
+                        <option value="pending">未完成</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="openAddModal()">
+                    ➕ 添加计划
+                </button>
+                <button class="btn btn-secondary" onclick="exportData()">
+                    📥 导出数据
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">
+                    📤 导入数据
+                </button>
+                <input type="file" id="importFile" accept=".json" style="display: none" onchange="importData(event)">
+            </div>
+        </div>
+
+        <!-- 计划列表 -->
+        <section class="plans-section animate-in" style="animation-delay: 0.4s">
+            <div class="plans-header">
+                <h2>📋 计划列表</h2>
+                <span id="planCount" style="color: var(--text-muted); font-size: 0.9rem;"></span>
+            </div>
+            <div id="plansContainer">
+                <!-- 动态生成 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- 添加/编辑模态框 -->
+    <div class="modal-overlay" id="planModal">
+        <div class="modal">
+            <h2 id="modalTitle">➕ 添加新计划</h2>
+            <form id="planForm" onsubmit="savePlan(event)">
+                <input type="hidden" id="planId">
+                <div class="form-group">
+                    <label>计划详情 *</label>
+                    <input type="text" id="planTitle" required placeholder="例如：英语学习、跑步">
+                </div>
+                <div class="form-group">
+                    <label>日期 *</label>
+                    <input type="date" id="planDate" required onchange="updateMonthWeek()">
+                </div>
+                <div class="form-group">
+                    <label>月份（自动识别，可修改）</label>
+                    <select id="planMonth">
+                        <option value="1月">1月</option>
+                        <option value="2月">2月</option>
+                        <option value="3月">3月</option>
+                        <option value="4月">4月</option>
+                        <option value="5月">5月</option>
+                        <option value="6月">6月</option>
+                        <option value="7月">7月</option>
+                        <option value="8月">8月</option>
+                        <option value="9月">9月</option>
+                        <option value="10月">10月</option>
+                        <option value="11月">11月</option>
+                        <option value="12月">12月</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>周（自动识别，可修改）</label>
+                    <select id="planWeek">
+                        <option value="第一周">第一周</option>
+                        <option value="第二周">第二周</option>
+                        <option value="第三周">第三周</option>
+                        <option value="第四周">第四周</option>
+                        <option value="第五周">第五周</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>类型标签</label>
+                    <select id="planType">
+                        <option value="learning">📚 学习输入</option>
+                        <option value="exercise">🏃‍♀️ 运动锻炼</option>
+                        <option value="hobby">🎵 兴趣爱好</option>
+                        <option value="goal">🌲 目标设定</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>总结（可选）</label>
+                    <textarea id="planSummary" placeholder="计划完成后的总结..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">取消</button>
+                    <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast 容器 -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // API 基础地址
+        const API_BASE = '/api/plans';
+        
+        // 缓存数据
+        let plansCache = [];
+        
+        // 类型映射
+        const TYPE_MAP = {
+            'learning': { label: '📚 学习输入', class: 'learning' },
+            'exercise': { label: '🏃‍♀️ 运动锻炼', class: 'exercise' },
+            'hobby': { label: '🎵 兴趣爱好', class: 'hobby' },
+            'goal': { label: '🌲 目标设定', class: 'goal' }
+        };
+
+        // API 请求封装
+        async function api(endpoint, method = 'GET', data = null) {
+            const options = {
+                method,
+                headers: { 'Content-Type': 'application/json' }
+            };
+            if (data) options.body = JSON.stringify(data);
+            
+            try {
+                const res = await fetch(endpoint, options);
+                return await res.json();
+            } catch (e) {
+                console.error('API 请求失败:', e);
+                showToast('❌ 网络请求失败，请确保服务器已启动', 'error');
+                return null;
+            }
+        }
+
+        // 获取所有计划
+        async function fetchPlans() {
+            const plans = await api(API_BASE);
+            if (plans) plansCache = plans;
+            return plansCache;
+        }
+
+        // 格式化日期显示
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            const weekDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const weekDay = weekDays[date.getDay()];
+            return `${year}年${month}月${day}日 ${weekDay}`;
+        }
+
+        // 根据日期自动计算月份和周
+        function updateMonthWeek() {
+            const dateInput = document.getElementById('planDate').value;
+            if (!dateInput) return;
+            
+            const date = new Date(dateInput);
+            const month = date.getMonth() + 1; // 1-12
+            const day = date.getDate();
+            
+            // 设置月份
+            document.getElementById('planMonth').value = `${month}月`;
+            
+            // 计算是第几周（按日期范围）
+            let week;
+            if (day <= 7) {
+                week = '第一周';
+            } else if (day <= 14) {
+                week = '第二周';
+            } else if (day <= 21) {
+                week = '第三周';
+            } else {
+                week = '第四周';
+            }
+            document.getElementById('planWeek').value = week;
+        }
+
+        // 渲染计划列表
+        async function renderPlans() {
+            const container = document.getElementById('plansContainer');
+            let plans = await fetchPlans();
+            if (!plans) return;
+
+            // 应用筛选
+            const filterMonth = document.getElementById('filterMonth').value;
+            const filterWeek = document.getElementById('filterWeek').value;
+            const filterType = document.getElementById('filterType').value;
+            const filterStatus = document.getElementById('filterStatus').value;
+
+            let filteredPlans = [...plans];
+            if (filterMonth) filteredPlans = filteredPlans.filter(p => p.month === filterMonth);
+            if (filterWeek) filteredPlans = filteredPlans.filter(p => p.week === filterWeek);
+            if (filterType) filteredPlans = filteredPlans.filter(p => p.type === filterType);
+            if (filterStatus) {
+                if (filterStatus === 'completed') filteredPlans = filteredPlans.filter(p => p.completed);
+                else filteredPlans = filteredPlans.filter(p => !p.completed);
+            }
+
+            // 按月份和周分组
+            const grouped = {};
+            filteredPlans.forEach(plan => {
+                const key = `${plan.month}-${plan.week}`;
+                if (!grouped[key]) {
+                    grouped[key] = {
+                        month: plan.month,
+                        week: plan.week,
+                        plans: []
+                    };
+                }
+                grouped[key].plans.push(plan);
+            });
+
+            // 排序
+            const sortedGroups = Object.values(grouped).sort((a, b) => {
+                const monthOrder = { '11月': 1, '12月': 2 };
+                const weekOrder = { '第一周': 1, '第二周': 2, '第三周': 3, '第四周': 4 };
+                if (monthOrder[a.month] !== monthOrder[b.month]) {
+                    return monthOrder[a.month] - monthOrder[b.month];
+                }
+                return weekOrder[a.week] - weekOrder[b.week];
+            });
+
+            if (filteredPlans.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">📭</div>
+                        <h3>暂无计划</h3>
+                        <p>点击"添加计划"按钮创建你的第一个计划</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = sortedGroups.map(group => `
+                    <div class="week-group">
+                        <div class="week-header">
+                            <h3>${group.month} ${group.week}</h3>
+                            <span class="week-stats">
+                                ${group.plans.filter(p => p.completed).length}/${group.plans.length} 已完成
+                            </span>
+                        </div>
+                        <div class="plan-list">
+                            ${group.plans.sort((a, b) => new Date(a.date) - new Date(b.date)).map(plan => `
+                                <div class="plan-item ${plan.completed ? 'completed' : ''}" data-id="${plan.id}">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" id="check-${plan.id}" ${plan.completed ? 'checked' : ''} 
+                                            onchange="toggleComplete('${plan.id}')">
+                                        <label for="check-${plan.id}">${plan.completed ? '✓' : ''}</label>
+                                    </div>
+                                    <div class="plan-title">${plan.title}</div>
+                                    <div class="plan-date">${formatDate(plan.date)}</div>
+                                    <span class="type-tag ${TYPE_MAP[plan.type]?.class || 'learning'}">
+                                        ${TYPE_MAP[plan.type]?.label || plan.type}
+                                    </span>
+                                    <div class="plan-actions">
+                                        <button onclick="editPlan('${plan.id}')" title="编辑">✏️</button>
+                                        <button class="delete" onclick="deletePlan('${plan.id}')" title="删除">🗑️</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // 更新计数
+            document.getElementById('planCount').textContent = `共 ${filteredPlans.length} 项`;
+            updateStats(plans);
+        }
+
+        // 更新统计
+        function updateStats(plans) {
+            const total = plans.length;
+            const completed = plans.filter(p => p.completed).length;
+            const rate = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+            document.getElementById('totalPlans').textContent = total;
+            document.getElementById('completedPlans').textContent = completed;
+            document.getElementById('completionRate').textContent = rate + '%';
+            document.getElementById('progressFill').style.width = rate + '%';
+
+            document.getElementById('learningCount').textContent = plans.filter(p => p.type === 'learning').length;
+            document.getElementById('exerciseCount').textContent = plans.filter(p => p.type === 'exercise').length;
+            document.getElementById('hobbyCount').textContent = plans.filter(p => p.type === 'hobby').length;
+        }
+
+        // 切换完成状态
+        async function toggleComplete(id) {
+            const result = await api(`${API_BASE}/${id}`, 'PATCH');
+            if (result) {
+                showToast(result.completed ? '✅ 已完成' : '⏳ 标记为未完成', 'success');
+                renderPlans();
+            }
+        }
+
+        // 打开添加模态框
+        function openAddModal() {
+            document.getElementById('modalTitle').textContent = '➕ 添加新计划';
+            document.getElementById('planForm').reset();
+            document.getElementById('planId').value = '';
+            document.getElementById('planDate').value = new Date().toISOString().split('T')[0];
+            updateMonthWeek(); // 自动计算月份和周
+            document.getElementById('planModal').classList.add('active');
+        }
+
+        // 编辑计划
+        async function editPlan(id) {
+            const plan = plansCache.find(p => p.id == id);
+            if (plan) {
+                document.getElementById('modalTitle').textContent = '✏️ 编辑计划';
+                document.getElementById('planId').value = plan.id;
+                document.getElementById('planTitle').value = plan.title;
+                document.getElementById('planDate').value = plan.date;
+                document.getElementById('planMonth').value = plan.month;
+                document.getElementById('planWeek').value = plan.week;
+                document.getElementById('planType').value = plan.type;
+                document.getElementById('planSummary').value = plan.summary || '';
+                document.getElementById('planModal').classList.add('active');
+            }
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('planModal').classList.remove('active');
+        }
+
+        // 保存计划
+        async function savePlan(event) {
+            event.preventDefault();
+            const id = document.getElementById('planId').value;
+            
+            const planData = {
+                title: document.getElementById('planTitle').value,
+                date: document.getElementById('planDate').value,
+                month: document.getElementById('planMonth').value,
+                week: document.getElementById('planWeek').value,
+                type: document.getElementById('planType').value,
+                summary: document.getElementById('planSummary').value
+            };
+
+            let result;
+            if (id) {
+                // 编辑
+                result = await api(`${API_BASE}/${id}`, 'PUT', planData);
+                if (result) showToast('✅ 计划已更新', 'success');
+            } else {
+                // 新增
+                result = await api(API_BASE, 'POST', planData);
+                if (result) showToast('✅ 计划已添加', 'success');
+            }
+
+            if (result) {
+                closeModal();
+                renderPlans();
+            }
+        }
+
+        // 删除计划
+        async function deletePlan(id) {
+            if (confirm('确定要删除这个计划吗？')) {
+                const result = await api(`${API_BASE}/${id}`, 'DELETE');
+                if (result) {
+                    showToast('🗑️ 计划已删除', 'success');
+                    renderPlans();
+                }
+            }
+        }
+
+        // 导出数据
+        async function exportData() {
+            const plans = await fetchPlans();
+            if (!plans) return;
+            
+            const dataStr = JSON.stringify(plans, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `schedule_backup_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('📥 数据已导出', 'success');
+        }
+
+        // 导入数据
+        async function importData(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = async function(e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (Array.isArray(data)) {
+                            if (confirm(`确定要导入 ${data.length} 条计划吗？这将覆盖现有数据。`)) {
+                                const result = await api(API_BASE, 'PUT', data);
+                                if (result) {
+                                    showToast('📤 数据已导入', 'success');
+                                    renderPlans();
+                                }
+                            }
+                        } else {
+                            showToast('❌ 文件格式错误', 'error');
+                        }
+                    } catch (err) {
+                        showToast('❌ 文件解析失败', 'error');
+                    }
+                };
+                reader.readAsText(file);
+            }
+            event.target.value = '';
+        }
+
+        // 显示提示
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // 筛选事件
+        document.getElementById('filterMonth').addEventListener('change', renderPlans);
+        document.getElementById('filterWeek').addEventListener('change', renderPlans);
+        document.getElementById('filterType').addEventListener('change', renderPlans);
+        document.getElementById('filterStatus').addEventListener('change', renderPlans);
+
+        // 点击模态框外部关闭
+        document.getElementById('planModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ESC 关闭模态框
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // 初始化
+        renderPlans();
+    </script>
+</body>
+</html>
+

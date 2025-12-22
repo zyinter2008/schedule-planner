@@ -1,0 +1,292 @@
+[
+  {
+    "id": "1",
+    "title": "跑步",
+    "date": "2025-11-07",
+    "month": "11月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "2",
+    "title": "英语",
+    "date": "2025-11-08",
+    "month": "11月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "3",
+    "title": "AI",
+    "date": "2025-11-08",
+    "month": "11月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "4",
+    "title": "读书3h",
+    "date": "2025-11-08",
+    "month": "11月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "5",
+    "title": "声乐练习",
+    "date": "2025-11-08",
+    "month": "11月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "6",
+    "title": "英语",
+    "date": "2025-11-10",
+    "month": "11月",
+    "week": "第二周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "7",
+    "title": "跑步",
+    "date": "2025-11-11",
+    "month": "11月",
+    "week": "第二周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "8",
+    "title": "前端基础突击",
+    "date": "2025-11-17",
+    "month": "11月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "9",
+    "title": "前端基础突击",
+    "date": "2025-11-18",
+    "month": "11月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "10",
+    "title": "前端基础突击",
+    "date": "2025-11-19",
+    "month": "11月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "11",
+    "title": "html学习",
+    "date": "2025-11-24",
+    "month": "11月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "12",
+    "title": "css学习",
+    "date": "2025-11-25",
+    "month": "11月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "13",
+    "title": "js学习",
+    "date": "2025-11-26",
+    "month": "11月",
+    "week": "第四周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "14",
+    "title": "CSS",
+    "date": "2025-12-02",
+    "month": "12月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "15",
+    "title": "JS",
+    "date": "2025-12-05",
+    "month": "12月",
+    "week": "第一周",
+    "type": "learning",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "16",
+    "title": "运动",
+    "date": "2025-12-03",
+    "month": "12月",
+    "week": "第一周",
+    "type": "exercise",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "id": "17",
+    "title": "声乐",
+    "date": "2025-12-06",
+    "month": "12月",
+    "week": "第一周",
+    "type": "hobby",
+    "completed": false,
+    "summary": ""
+  },
+  {
+    "id": "18",
+    "title": "html实践",
+    "date": "2025-12-19",
+    "month": "12月",
+    "week": "第三周",
+    "type": "learning",
+    "completed": true,
+    "summary": ""
+  },
+  {
+    "title": "html实践-简单计划制定功能",
+    "date": "2025-12-20",
+    "month": "12月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "1766212214131s91g3331s",
+    "completed": true
+  },
+  {
+    "title": "每周读书3h",
+    "date": "2025-12-21",
+    "month": "12月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "1766212319495d3oma9lo6",
+    "completed": true
+  },
+  {
+    "title": "运动",
+    "date": "2025-12-20",
+    "month": "12月",
+    "week": "第三周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1766212394574noqa3h53y",
+    "completed": true
+  },
+  {
+    "title": "万步卡",
+    "date": "2025-12-17",
+    "month": "12月",
+    "week": "第三周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1766362895678c7gtd0x08",
+    "completed": true
+  },
+  {
+    "title": "篮球",
+    "date": "2025-12-21",
+    "month": "12月",
+    "week": "第三周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1766362911459dvokwaayw",
+    "completed": true
+  },
+  {
+    "title": "读书3h",
+    "date": "2025-12-27",
+    "month": "12月",
+    "week": "第四周",
+    "type": "learning",
+    "summary": "",
+    "id": "17663636067626u6jtkht9",
+    "completed": false
+  },
+  {
+    "title": "学习小程序开发",
+    "date": "2025-12-22",
+    "month": "12月",
+    "week": "第四周",
+    "type": "learning",
+    "summary": "",
+    "id": "1766363621010p1z8r2rt7",
+    "completed": false
+  },
+  {
+    "title": "运动",
+    "date": "2025-12-23",
+    "month": "12月",
+    "week": "第四周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1766363632418nspl7nk29",
+    "completed": false
+  },
+  {
+    "title": "运动",
+    "date": "2025-12-25",
+    "month": "12月",
+    "week": "第四周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1766363645287avkv257hb",
+    "completed": false
+  },
+  {
+    "title": "声乐",
+    "date": "2025-12-27",
+    "month": "12月",
+    "week": "第四周",
+    "type": "hobby",
+    "summary": "",
+    "id": "1766363677399ypak99oi4",
+    "completed": false
+  },
+  {
+    "title": "学习小程序开发",
+    "date": "2025-12-24",
+    "month": "12月",
+    "week": "第四周",
+    "type": "learning",
+    "summary": "",
+    "id": "176636369155399vrkmdam",
+    "completed": false
+  }
+]
