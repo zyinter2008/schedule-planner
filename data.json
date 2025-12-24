@@ -2340,14 +2340,14 @@
     "completed": false
   },
   {
-    "title": "运动",
+    "title": "游泳",
     "date": "2025-12-23",
     "month": "12月",
     "week": "第四周",
     "type": "exercise",
     "summary": "",
     "id": "1766363632418nspl7nk29",
-    "completed": false
+    "completed": true
   },
   {
     "title": "运动",
