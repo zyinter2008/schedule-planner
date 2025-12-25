@@ -2331,13 +2331,13 @@
   },
   {
     "title": "学习小程序开发",
-    "date": "2025-12-22",
+    "date": "2025-12-23",
     "month": "12月",
     "week": "第四周",
     "type": "learning",
     "summary": "",
     "id": "1766363621010p1z8r2rt7",
-    "completed": false
+    "completed": true
   },
   {
     "title": "游泳",
@@ -2371,12 +2371,12 @@
   },
   {
     "title": "学习小程序开发",
-    "date": "2025-12-24",
+    "date": "2025-12-25",
     "month": "12月",
     "week": "第四周",
     "type": "learning",
     "summary": "",
     "id": "176636369155399vrkmdam",
-    "completed": false
+    "completed": true
   }
 ]
