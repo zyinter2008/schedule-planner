@@ -211,9 +211,12 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
     
     def log_message(self, format, *args):
         """自定义日志格式"""
-        if '/api/' in args[0]:
-            return  # API 请求单独处理日志
-        # 只记录非 API 请求
+        try:
+            if args and isinstance(args[0], str) and '/api/' in args[0]:
+                return  # API 请求单独处理日志
+        except:
+            pass
+        # 静默其他日志
         pass
 
 def main():

@@ -2388,5 +2388,115 @@
     "summary": "",
     "id": "1766967674695o7493pgv5",
     "completed": false
+  },
+  {
+    "title": "跑步",
+    "date": "2026-01-14",
+    "month": "1月",
+    "week": "第二周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1768751883217xe6l6ypg0",
+    "completed": true
+  },
+  {
+    "title": "跑步",
+    "date": "2026-01-16",
+    "month": "1月",
+    "week": "第二周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1768751911880sajpz5m50",
+    "completed": true
+  },
+  {
+    "title": "读书3h",
+    "date": "2026-01-17",
+    "month": "1月",
+    "week": "第二周",
+    "type": "learning",
+    "summary": "",
+    "id": "1768751933727nncqnk7fm",
+    "completed": true
+  },
+  {
+    "title": "学英语",
+    "date": "2026-01-16",
+    "month": "1月",
+    "week": "第二周",
+    "type": "learning",
+    "summary": "",
+    "id": "17687519527744y40qyvqv",
+    "completed": true
+  },
+  {
+    "title": "小程序开发",
+    "date": "2026-01-19",
+    "month": "1月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "1768751986899msg8o8od9",
+    "completed": false
+  },
+  {
+    "title": "声乐",
+    "date": "2026-01-17",
+    "month": "1月",
+    "week": "第二周",
+    "type": "hobby",
+    "summary": "",
+    "id": "1768752007459gw8a3m0en",
+    "completed": false
+  },
+  {
+    "title": "读书3h",
+    "date": "2026-01-24",
+    "month": "1月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "17687520299170q5r670tv",
+    "completed": false
+  },
+  {
+    "title": "跑步",
+    "date": "2026-01-20",
+    "month": "1月",
+    "week": "第三周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1768752048522nfxhnf3et",
+    "completed": false
+  },
+  {
+    "title": "跑步",
+    "date": "2026-01-22",
+    "month": "1月",
+    "week": "第三周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1768752064420fgt1inj5y",
+    "completed": false
+  },
+  {
+    "title": "声乐",
+    "date": "2026-01-25",
+    "month": "1月",
+    "week": "第三周",
+    "type": "hobby",
+    "summary": "",
+    "id": "1768752095417d3f1msdc1",
+    "completed": false
+  },
+  {
+    "title": "小程序开发",
+    "date": "2026-01-21",
+    "month": "1月",
+    "week": "第二周",
+    "type": "learning",
+    "summary": "",
+    "id": "17687521202284xg1wq7sq",
+    "completed": false
   }
 ]
