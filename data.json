@@ -2461,17 +2461,17 @@
   },
   {
     "title": "跑步",
-    "date": "2026-01-20",
+    "date": "2026-01-24",
     "month": "1月",
     "week": "第三周",
     "type": "exercise",
     "summary": "",
     "id": "1768752048522nfxhnf3et",
-    "completed": false
+    "completed": true
   },
   {
     "title": "跑步",
-    "date": "2026-01-22",
+    "date": "2026-01-25",
     "month": "1月",
     "week": "第三周",
     "type": "exercise",
@@ -2498,5 +2498,35 @@
     "summary": "",
     "id": "17687521202284xg1wq7sq",
     "completed": false
+  },
+  {
+    "title": "英语",
+    "date": "2026-01-24",
+    "month": "1月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "17692610165753axosk7se",
+    "completed": true
+  },
+  {
+    "title": "英语",
+    "date": "2026-01-25",
+    "month": "1月",
+    "week": "第三周",
+    "type": "learning",
+    "summary": "",
+    "id": "1769261034313fqgjml6mh",
+    "completed": false
+  },
+  {
+    "title": "声乐",
+    "date": "2026-01-24",
+    "month": "1月",
+    "week": "第三周",
+    "type": "hobby",
+    "summary": "",
+    "id": "1769261059730n8kb109xa",
+    "completed": true
   }
 ]
