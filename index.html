@@ -1092,23 +1092,36 @@
             if (!dateInput) return;
             
             const date = new Date(dateInput);
-            const month = date.getMonth() + 1; // 1-12
-            const day = date.getDate();
             
-            // 设置月份
+            // 找到该日期所在周的周一
+            const dayOfWeek = date.getDay(); // 0=周日, 1=周一, ..., 6=周六
+            const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek; // 周日往前6天，其他往前到周一
+            const monday = new Date(date);
+            monday.setDate(date.getDate() + mondayOffset);
+            
+            // 用周一的月份作为整周的月份
+            const month = monday.getMonth() + 1; // 1-12
             document.getElementById('planMonth').value = `${month}月`;
             
-            // 计算是第几周（按日期范围）
-            let week;
-            if (day <= 7) {
-                week = '第一周';
-            } else if (day <= 14) {
-                week = '第二周';
-            } else if (day <= 21) {
-                week = '第三周';
+            // 计算是该月的第几周（基于周一在当月是第几个周一）
+            // 找到当月第一个周一
+            const firstDayOfMonth = new Date(monday.getFullYear(), monday.getMonth(), 1);
+            const firstDayOfWeek = firstDayOfMonth.getDay(); // 0=周日, 1=周一, ...
+            let firstMonday;
+            if (firstDayOfWeek === 1) {
+                firstMonday = 1; // 1号就是周一
+            } else if (firstDayOfWeek === 0) {
+                firstMonday = 2; // 1号是周日，2号是周一
             } else {
-                week = '第四周';
+                firstMonday = 1 + (8 - firstDayOfWeek); // 找到第一个周一
             }
+            
+            // 计算当前周一是第几周
+            const mondayDate = monday.getDate();
+            const weekNumber = Math.floor((mondayDate - firstMonday) / 7) + 1;
+            
+            const weekNames = ['第一周', '第二周', '第三周', '第四周', '第五周'];
+            const week = weekNames[Math.min(weekNumber - 1, 4)] || '第五周';
             document.getElementById('planWeek').value = week;
         }
 
