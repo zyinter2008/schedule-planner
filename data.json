@@ -2557,7 +2557,7 @@
     "type": "learning",
     "summary": "",
     "id": "17696462864906ntd1fy8k",
-    "completed": false
+    "completed": true
   },
   {
     "title": "跑步",
@@ -2567,7 +2567,7 @@
     "type": "exercise",
     "summary": "",
     "id": "176964630066647p47bvky",
-    "completed": false
+    "completed": true
   },
   {
     "title": "英语",
@@ -2577,7 +2577,7 @@
     "type": "learning",
     "summary": "",
     "id": "1769646315395cibwu5dpi",
-    "completed": false
+    "completed": true
   },
   {
     "title": "每周读书3h",
