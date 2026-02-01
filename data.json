@@ -2617,6 +2617,16 @@
     "type": "hobby",
     "summary": "",
     "id": "17696463876556ye1ehx4i",
-    "completed": false
+    "completed": true
+  },
+  {
+    "title": "健身",
+    "date": "2026-02-01",
+    "month": "1月",
+    "week": "第四周",
+    "type": "exercise",
+    "summary": "",
+    "id": "1769910273783uwb98ecld",
+    "completed": true
   }
 ]
